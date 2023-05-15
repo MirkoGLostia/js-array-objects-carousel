@@ -1,0 +1,94 @@
+/*********
+ *GENERAL*
+ *********/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/******
+*MAIN*
+******/
+
+#main-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+    /* buttons*/
+
+    button[id$="-image"] {
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #cccccc;
+        font-size: 20px;
+    }
+    
+    button[id^="previous"] {
+        position: relative;
+        top: 40px;
+        margin-top: 50px;
+    }
+    
+    button[id^="next"] {
+        position: relative;
+        bottom: 40px;
+    }
+    
+    
+    /* main slideshow */
+
+    #container > div {
+        display: none;
+        text-align: center;
+        width: 50vw;
+        height: 30vw;
+        margin: 0 auto;
+    }
+
+    #container > .active {
+        display: block;
+    }
+
+    #container > div > img {
+        object-fit: scale-down;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* side slideshow */
+
+    #side-bar-container {
+        position: absolute;
+        z-index: 10;
+        top: 80px;
+        right: 15vw;
+        height: 30vw;
+        width: 6vw;
+    }
+
+    #side-bar-container img {
+        object-fit: contain;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    #side-bar-container .opacity {
+        position: absolute;
+        z-index: 12;
+        background-color: rgba(0, 0, 0, 0.541);
+        width: 6vw;
+        height: 6vw;
+    }
+
